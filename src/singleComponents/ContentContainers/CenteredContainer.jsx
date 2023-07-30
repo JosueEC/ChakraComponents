@@ -5,11 +5,10 @@ export default function CenteredContainer ({ children, ...rest }) {
   return (
     <Flex
       {...rest}
-      border='solid 2px green'
       minH='100vh'
       align='center'
       justify='center'
-      bg='gray.800'
+      bg='gray.700'
     >
       {children}
     </Flex>

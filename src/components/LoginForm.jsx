@@ -1,22 +1,22 @@
-import { Box, Stack, Text } from '@chakra-ui/react'
+import { Stack, Text } from '@chakra-ui/react'
 import CenteredContainer from '../singleComponents/ContentContainers/CenteredContainer'
+import VerticalContainer from '../singleComponents/ContentContainers/VerticalContainer'
 import FormContainer from '../singleComponents/ContentContainers/FormContainer'
 import GradientText from '../singleComponents/GradientText'
+import EmailField from '../singleComponents/Inputs/EmailField'
+import PasswordFiled from '../singleComponents/Inputs/PasswordField'
 
 export default function LoginForm () {
   const bgText = 'gray.300'
-  const bgElement = 'gray.800'
 
   return (
     <CenteredContainer>
-      <FormContainer>
+      <VerticalContainer>
         <Stack
           align='center'
           rounded='lg'
         >
-          <GradientText
-            text='Hola de nuevo!'
-          />
+          <GradientText text='Hola de nuevo!' />
           <Text
             fontSize='lg'
             color={bgText}
@@ -25,16 +25,12 @@ export default function LoginForm () {
           </Text>
         </Stack>
         <form>
-          <Box
-            rounded='lg'
-            bg={bgElement}
-            shadow='lg'
-            p={8}
-          >
-            <h2>Prueba de contenido</h2>
-          </Box>
+          <FormContainer>
+            <EmailField />
+            <PasswordFiled />
+          </FormContainer>
         </form>
-      </FormContainer>
+      </VerticalContainer>
     </CenteredContainer>
   )
 }

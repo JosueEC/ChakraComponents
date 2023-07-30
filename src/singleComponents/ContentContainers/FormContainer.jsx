@@ -1,17 +1,18 @@
 /* eslint-disable react/prop-types */
-import { Stack } from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
 
 export default function FormContainer ({ children }) {
+  const bgElement = 'gray.800'
   return (
-    <Stack
-      bg='gray.700'
-      spacing={8}
-      mx='auto'
-      maxW='lg'
-      py={12}
-      px={6}
+    <Box
+      rounded='lg'
+      bg={bgElement}
+      shadow='lg'
+      p={8}
     >
-      {children}
-    </Stack>
+      <Stack spacing={4}>
+        {children}
+      </Stack>
+    </Box>
   )
 }
