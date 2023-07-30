@@ -8,9 +8,10 @@ export default function FormContainer ({ children }) {
       rounded='lg'
       bg={bgElement}
       shadow='lg'
+      height='sm'
       p={8}
     >
-      <Stack spacing={4}>
+      <Stack spacing={7}>
         {children}
       </Stack>
     </Box>

@@ -24,12 +24,6 @@ export default function LoginForm () {
           rounded='lg'
         >
           <GradientText text='Hola de nuevo!' />
-          <Text
-            fontSize='lg'
-            color={bgText}
-          >
-            Ingresa para disfrutar de todos nuestros servicios
-          </Text>
         </Stack>
         <form onSubmit={handleSubmit(customSubmit)}>
           <FormContainer>

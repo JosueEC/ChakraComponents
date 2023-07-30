@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { FormControl, FormErrorMessage, FormLabel, Input } from '@chakra-ui/react'
 import { emailRules } from '../../utils/HookFormValidations/Rules'
-import { bgText } from '../../utils/ChakraTheme/ColorPalette'
+import { bgText, bgFocusFiled, bgErrorField } from '../../utils/ChakraTheme/ColorPalette'
 
 export default function EmailField ({ register, errors }) {
   return (
@@ -11,7 +11,7 @@ export default function EmailField ({ register, errors }) {
         color={bgText}
         type='email'
         placeholder='ejemplo-correo@gmail.com'
-        focusBorderColor={errors.email ? 'red.500' : 'teal.400'}
+        focusBorderColor={errors.email ? bgErrorField : bgFocusFiled}
         {...register('email', emailRules)}
       />
       <FormErrorMessage>{errors?.email?.message}</FormErrorMessage>
