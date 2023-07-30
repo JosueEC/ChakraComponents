@@ -1,14 +1,19 @@
-import { FormControl, FormLabel, Input } from '@chakra-ui/react'
+/* eslint-disable react/prop-types */
+import { FormControl, FormErrorMessage, FormLabel, Input } from '@chakra-ui/react'
+import { passwordRules } from '../../utils/HookFormValidations/Rules'
+import { bgText } from '../../utils/ChakraTheme/ColorPalette'
 
-export default function PasswordFiled () {
-  const bgText = 'gray.300'
+export default function PasswordFiled ({ register, errors }) {
   return (
-    <FormControl>
+    <FormControl isInvalid={errors.password}>
       <FormLabel color={bgText}>Contraseña</FormLabel>
       <Input
+        color={bgText}
         type='password'
-        focusBorderColor='teal.400'
+        focusBorderColor={errors.password ? 'red.500' : 'teal.400'}
+        {...register('password', passwordRules)}
       />
+      <FormErrorMessage>{errors?.password?.message}</FormErrorMessage>
     </FormControl>
   )
 }

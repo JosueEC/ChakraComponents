@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Heading } from '@chakra-ui/react'
+import { bgGradient } from '../utils/ChakraTheme/ColorPalette'
 
 export default function GradientText ({ text, ...rest }) {
   return (
     <Heading
       {...rest}
       fontSize='4xl'
-      bgGradient='linear(to-l, teal.300, green.400)'
+      bgGradient={bgGradient}
       bgClip='text'
     >
       {text}

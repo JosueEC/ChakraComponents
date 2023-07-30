@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Flex } from '@chakra-ui/react'
+import { bgPage } from '../../utils/ChakraTheme/ColorPalette'
 
 export default function CenteredContainer ({ children, ...rest }) {
   return (
@@ -8,7 +9,7 @@ export default function CenteredContainer ({ children, ...rest }) {
       minH='100vh'
       align='center'
       justify='center'
-      bg='gray.700'
+      bg={bgPage}
     >
       {children}
     </Flex>

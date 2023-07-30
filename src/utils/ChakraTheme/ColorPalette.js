@@ -1,0 +1,5 @@
+export const bgPage = 'gray.700'
+export const btElement = 'gray.800'
+export const bgText = 'gray.300'
+export const bgGradient = 'linear(to-l, teal.300, green.400)'
+export const btButton = 'teal.400'

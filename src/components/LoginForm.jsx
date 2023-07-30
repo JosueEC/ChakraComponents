@@ -1,4 +1,6 @@
 import { Stack, Text } from '@chakra-ui/react'
+import { useForm } from 'react-hook-form'
+import { bgText } from '../utils/ChakraTheme/ColorPalette'
 import CenteredContainer from '../singleComponents/ContentContainers/CenteredContainer'
 import VerticalContainer from '../singleComponents/ContentContainers/VerticalContainer'
 import FormContainer from '../singleComponents/ContentContainers/FormContainer'
@@ -8,7 +10,11 @@ import PasswordFiled from '../singleComponents/Inputs/PasswordField'
 import SubmitButton from '../singleComponents/Buttons/SubmitButton'
 
 export default function LoginForm () {
-  const bgText = 'gray.300'
+  const { register, handleSubmit, formState: { errors } } = useForm()
+
+  function customSubmit (data) {
+    console.info(data)
+  }
 
   return (
     <CenteredContainer>
@@ -25,10 +31,16 @@ export default function LoginForm () {
             Ingresa para disfrutar de todos nuestros servicios
           </Text>
         </Stack>
-        <form>
+        <form onSubmit={handleSubmit(customSubmit)}>
           <FormContainer>
-            <EmailField />
-            <PasswordFiled />
+            <EmailField
+              register={register}
+              errors={errors}
+            />
+            <PasswordFiled
+              register={register}
+              errors={errors}
+            />
             <Stack spacing={5}>
               <SubmitButton text='Ingresar' />
               <Text

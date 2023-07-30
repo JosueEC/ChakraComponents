@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Box, Stack } from '@chakra-ui/react'
+import { bgElement } from '../../utils/ChakraTheme/ColorPalette'
 
 export default function FormContainer ({ children }) {
-  const bgElement = 'gray.800'
   return (
     <Box
       rounded='lg'
