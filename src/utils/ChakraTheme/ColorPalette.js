@@ -1,0 +1,8 @@
+export const bgPage = 'black'
+export const bgElement = 'blue.900'
+export const bgFocusFiled = 'blue.500'
+export const bgErrorField = 'red.500'
+export const bgText = 'gray.300'
+export const bgGradient = 'linear(to-l, cyan.300, cyan.400)'
+export const bgButton = 'cyan.400'
+export const bgHoverButton = 'cyan.700'
