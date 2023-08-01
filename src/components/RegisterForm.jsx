@@ -1,5 +1,9 @@
+import FormContainer from '../singleComponents/ContentContainers/FormContainer'
+
 export default function RegisterForm () {
   return (
-    <h2>Formulario de resgistro</h2>
+    <FormContainer>
+      <h2>Esete es el esqueleto del formulario de registro</h2>
+    </FormContainer>
   )
 }
